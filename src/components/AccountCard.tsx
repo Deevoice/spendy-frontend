@@ -90,7 +90,7 @@ export default function AccountCard({ account, isDetailed = false, onDelete }: A
                                 ×
                             </button>
                         </div>
-                        <p>Вы уверены, что хотите удалить счет "{account.name}"? Это действие нельзя отменить.</p>
+                        <p>Вы уверены, что хотите удалить счет &quot;{account.name}&quot;? Это действие нельзя отменить.</p>
                         <div className="modal-actions">
                             <button
                                 className="button-secondary"

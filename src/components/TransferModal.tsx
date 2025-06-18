@@ -37,17 +37,14 @@ export default function TransferModal({
     const toAccountData = accounts.find(acc => acc.id === toAccount);
 
     useEffect(() => {
-        if (fromAccount && toAccount && amount && fromAccountData?.currency !== toAccountData?.currency) {
-            fetchExchangeRate(fromAccountData!.currency, toAccountData!.currency);
-        } else {
-            setExchangeRate('');
-            setConvertedAmount(null);
+        if (fromAccountData && toAccountData) {
+            fetchExchangeRate();
         }
-    }, [fromAccount, toAccount, amount]);
+    }, [fromAccountData, toAccountData, fetchExchangeRate]);
 
-    const fetchExchangeRate = async (from: string, to: string) => {
+    const fetchExchangeRate = async () => {
         try {
-            const response = await fetchWithAuth(`/api/exchange-rate?from=${from}&to=${to}`);
+            const response = await fetchWithAuth(`/api/exchange-rate?from=${fromAccountData!.currency}&to=${toAccountData!.currency}`);
             if (!response.ok) {
                 const errorData = await response.json();
                 throw new Error(errorData.detail || 'Failed to fetch exchange rate');
