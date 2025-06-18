@@ -25,6 +25,8 @@ WORKDIR /app
 
 COPY --from=builder /app/deployment/entrypoint.sh /app/bin/
 COPY --from=builder /app /app/
+COPY --from=builder /app/prisma /app/prisma
+COPY --from=builder /app/public /app/public
 
 RUN chmod -R +x /app/bin
 
