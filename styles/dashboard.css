@@ -1,0 +1,456 @@
+.dashboard {
+    background-color: var(--background-secondary);
+    border:  1px solid var(--border);
+    border-radius: 40px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.dashboard-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.dashboard-title h1 {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+.dashboard-actions {
+    display: flex;
+    gap: 16px;
+    position: relative;
+}
+
+.dashboard-actions-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--dashboard-card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 200px;
+    z-index: 100;
+}
+
+.dashboard-actions-dropdown.open {
+    display: flex;
+}
+
+.dashboard-actions-dropdown button {
+    width: 100%;
+    text-align: left;
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.dashboard-actions-dropdown button:hover {
+    background-color: var(--dashboard-sidebar-hover);
+}
+
+.dashboard-actions-toggle {
+    display: none;
+}
+
+.dashboard-actions {
+    gap: 8px;
+}
+
+.dashboard-actions > button:not(.dashboard-actions-toggle) {
+    display: none;
+}
+
+.dashboard-actions-toggle {
+    display: block;
+}
+
+.dashboard-actions-dropdown {
+    width: 100%;
+}
+
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+/* @media (min-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+.dashboard-card {
+    background-color: var(--dashboard-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid var(--border);
+    transition: all .5s ease-out;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.account-select {
+    width: 100%;
+    max-width: 200px;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background-color: var(--background-secondary);
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    transition: all 0.2s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.account-select:hover {
+    border-color: var(--primary);
+    background-color: var(--dashboard-sidebar-hover);
+}
+
+.account-select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-hover);
+    background-color: var(--background-secondary);
+}
+
+/* Стили для выпадающего списка */
+.account-select option {
+    background-color: var(--background-secondary);
+    color: var(--text);
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    margin: 4px;
+}
+
+.account-select option:hover {
+    background-color: var(--dashboard-sidebar-hover);
+}
+
+.account-select:disabled {
+    background-color: var(--background);
+    cursor: not-allowed;
+    opacity: 0.7;
+    border-color: var(--border);
+}
+
+.account-select optgroup {
+    background-color: var(--background-secondary);
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border);
+    border-radius: 8px 8px 0 0;
+}
+
+.account-select optgroup option {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-bottom: none;
+    border-radius: 0;
+}
+
+.account-select optgroup option:hover {
+    background-color: var(--dashboard-sidebar-hover);
+}
+
+/* Стили для выпадающего списка в разных браузерах */
+.account-select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.account-select::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 4px;
+}
+
+.account-select::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 4px;
+}
+
+.account-select::-webkit-scrollbar-thumb:hover {
+    background: var(--text-secondary);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .account-select {
+        font-size: 0.95rem;
+        padding: 0.7rem 2.25rem 0.7rem 0.875rem;
+        max-width: 180px;
+    }
+
+    .account-select option {
+        font-size: 0.95rem;
+        padding: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .account-select {
+        width: 100%;
+        max-width: 160px;
+        font-size: 0.9rem;
+        padding: 0.625rem 2rem 0.625rem 0.75rem;
+        border-radius: 6px;
+    }
+
+    .account-select option {
+        font-size: 0.9rem;
+        padding: 0.625rem;
+        border-radius: 6px;
+    }
+
+    .account-select optgroup {
+        padding: 0.625rem;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .account-select optgroup option {
+        padding: 0.625rem 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .account-select {
+        max-width: 140px;
+        font-size: 0.875rem;
+        padding: 0.5rem 1.75rem 0.5rem 0.625rem;
+    }
+
+    .account-select option {
+        font-size: 0.875rem;
+        padding: 0.5rem;
+        border-radius: 4px;
+    }
+
+    .account-select optgroup {
+        padding: 0.5rem;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .account-select optgroup option {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.income-expenses__section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.balance-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    /* Чтобы блоки заполняли всю ширину */
+}
+
+.balance-item {
+    align-items: center;
+    min-width: 160px;
+    flex: 1 1 auto;
+    padding: 14px;
+}
+
+.balance-item {
+    box-sizing: border-box;
+}
+
+.balance-item {
+    /* padding: 10px; */
+    border-radius: 10px;
+}
+
+.income-section,
+.expenses-section {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: var(--dashboard-balance-bg);
+}
+
+
+.balance-item,
+.income-item,
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--dashboard-balance-bg);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.balance-item:last-child,
+.income-item:last-child,
+.expense-item:last-child {
+    border-bottom: none;
+}
+
+.balance-label,
+.income-label,
+.expense-label {
+    font-size: 0.9rem;
+    color: var(--primary);
+}
+
+.balance-amount,
+.income-amount,
+.expense-amount {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.balance-amount {
+    color: var(--primary);
+}
+
+.income-amount {
+    color: var(--success);
+}
+
+.expense-amount {
+    color: #c62828;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-label {
+    font-weight: 500;
+}
+
+.item-value {
+    font-weight: 500;
+}
+
+.item-value.income {
+    color: #22c55e;
+}
+
+.item-value.expense {
+    color: #ef4444;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.badge.income {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge.expense {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid #e5e7eb;
+    border-top-color: #6366f1;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: #ef4444;
+} 
+
+@media (max-width: 768px) {
+    .dashboard {
+        padding: 1rem;
+        border-radius: 20px;
+    }
+}

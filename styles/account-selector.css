@@ -1,0 +1,109 @@
+.account-selector {
+    position: relative;
+    min-width: 200px;
+}
+
+.account-selector-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.account-selector-button:hover {
+    border-color: var(--primary);
+}
+
+.account-selector-button svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.2s ease;
+}
+
+.account-selector-button.open svg {
+    transform: rotate(180deg);
+}
+
+.account-selector-list {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.account-selector-item {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.account-selector-item:hover {
+    background-color: var(--dashboard-sidebar-hover);
+}
+
+.account-selector-item.active {
+    background-color: var(--dashboard-sidebar-active);
+    color: var(--primary);
+}
+
+.account-selector-item-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.account-selector-item-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.account-selector-item-balance {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.account-selector-divider {
+    height: 1px;
+    background-color: var(--border);
+    margin: 0.5rem 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .account-selector {
+        width: 100%;
+    }
+
+    .account-selector-button {
+        width: 100%;
+    }
+
+    .account-selector-list {
+        position: fixed;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 50vh;
+        border-radius: 8px 8px 0 0;
+        border-bottom: none;
+    }
+} 
