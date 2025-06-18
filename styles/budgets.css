@@ -1,0 +1,138 @@
+.budgets-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.budgets-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.budgets-header h1 {
+    font-size: 2rem;
+    color: var(--text);
+    margin: 0;
+}
+
+.budgets-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.budgets-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.budgets-section,
+.goals-section {
+    background: var(--background-secondary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.budgets-section h2,
+.goals-section h2 {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 0 0 1.5rem 0;
+}
+
+.budget-list,
+.goal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.budget-card,
+.goal-card {
+    background: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.budget-header,
+.goal-header {
+    margin-bottom: 1rem;
+}
+
+.budget-header h3,
+.goal-header h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+}
+
+.budget-amounts,
+.goal-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--background-secondary);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 1rem 0;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.budget-footer,
+.goal-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.goal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.goal-contribution {
+    text-align: right;
+}
+
+.goal-contribution .monthly {
+    font-weight: 600;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .budgets-page {
+        padding: 1rem;
+    }
+
+    .budgets-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .budgets-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .budget-list,
+    .goal-list {
+        grid-template-columns: 1fr;
+    }
+} 

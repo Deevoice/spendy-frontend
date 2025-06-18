@@ -1,0 +1,74 @@
+.goal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.goal-card {
+    background: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.goal-header {
+    margin-bottom: 1rem;
+}
+
+.goal-header h3 {
+    font-size: 1.2rem;
+    color: var(--text);
+    margin: 0 0 0.5rem 0;
+}
+
+.goal-amounts {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.goal-amounts .current {
+    color: var(--success);
+}
+
+.goal-amounts .target {
+    font-weight: 600;
+}
+
+.goal-details {
+    margin-top: 1rem;
+}
+
+.goal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.goal-info .deadline {
+    color: var(--warning);
+}
+
+.goal-info .remaining-months {
+    font-style: italic;
+}
+
+.goal-contribution {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+.goal-contribution .monthly {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .goal-list {
+        grid-template-columns: 1fr;
+    }
+} 

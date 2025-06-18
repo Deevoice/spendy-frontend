@@ -1,0 +1,66 @@
+:root {
+  /* Light theme (default) */
+  --background: #ffffff;
+  --background-secondary: #f8f9fa;
+  --text: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --secondary: #f3f4f6;
+  --border: #e5e7eb;
+  --error: #dc2626;
+  --success: #16a34a;
+  --warning: #d97706;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --header-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --loading-spinner-bg: #f3f3f3;
+  --loading-spinner-color: #2563eb;
+
+  /* Dashboard specific */
+  --dashboard-card-bg: #ffffff;
+  --dashboard-card-hover: #f8fafc;
+  --dashboard-stat-bg: #f1f5f9;
+  --dashboard-stat-text: #0f172a;
+  --dashboard-chart-bg: #ffffff;
+  --dashboard-chart-grid: #e2e8f0;
+  --dashboard-chart-text: #64748b;
+  --dashboard-income: #10b981;
+  --dashboard-expense: #ef4444;
+  --dashboard-balance: #3b82f6;
+  --dashboard-sidebar-bg: #f8fafc;
+  --dashboard-sidebar-hover: #f1f5f9;
+  --dashboard-sidebar-active: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  --background: #111827;
+  --background-secondary: #1f2937;
+  --text: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --primary: #3b82f6;
+  --primary-hover: #60a5fa;
+  --secondary: #374151;
+  --border: #374151;
+  --error: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --header-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --loading-spinner-bg: #374151;
+  --loading-spinner-color: #3b82f6;
+
+  /* Dashboard specific */
+  --dashboard-card-bg: #1f2937;
+  --dashboard-card-hover: #374151;
+  --dashboard-stat-bg: #111827;
+  --dashboard-stat-text: #f3f4f6;
+  --dashboard-chart-bg: #1f2937;
+  --dashboard-chart-grid: #374151;
+  --dashboard-chart-text: #9ca3af;
+  --dashboard-income: #34d399;
+  --dashboard-expense: #f87171;
+  --dashboard-balance: #60a5fa;
+  --dashboard-sidebar-bg: #111827;
+  --dashboard-sidebar-hover: #1f2937;
+  --dashboard-sidebar-active: #374151;
+} 
