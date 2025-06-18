@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Account } from '@/types';
-import { getAccounts, createAccount, updateAccount, deleteAccount } from '@/api';
+import { getAccounts, createAccount, updateAccount, deleteAccount } from '@/api/transactions';
 import '@/styles/accounts.css';
 
 export default function AccountsPage() {

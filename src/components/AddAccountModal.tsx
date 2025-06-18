@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Account } from '@/types';
-import { createAccount } from '@/api';
+import { createAccount } from '@/api/transactions';
 import Modal from './Modal';
 import '@/styles/forms.css';
 import '@/styles/buttons.css';

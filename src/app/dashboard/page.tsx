@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { Account, Category, Transaction } from '@/types';
-import { getAccounts, getCategories, getTransactions } from '@/api';
+import { getAccounts, getCategories, getTransactions } from '@/api/transactions';
 import AddTransactionModal from '@/components/AddTransactionModal';
 import AddCategoryModal from '@/components/AddCategoryModal';
 import AddAccountModal from '@/components/AddAccountModal';

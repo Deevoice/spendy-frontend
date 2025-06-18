@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Transaction, Account, Category } from '@/types';
-import { createTransaction, updateTransaction, deleteTransaction } from '@/api';
+import { createTransaction, updateTransaction, deleteTransaction } from '@/api/transactions';
 import '@/styles/transaction-form.css';
 
 interface TransactionModalProps {

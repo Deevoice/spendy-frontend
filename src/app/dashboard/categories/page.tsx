@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Category } from '@/types';
-import { getCategories, createCategory, updateCategory, deleteCategory } from '@/api';
+import { getCategories, createCategory, updateCategory, deleteCategory } from '@/api/transactions';
 import '@/styles/categories.css';
 
 export default function CategoriesPage() {

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Category } from '@/types';
-import { createBudget } from '@/api';
 import '@/styles/modal.css';
 
 interface AddBudgetModalProps {
@@ -41,12 +40,6 @@ export default function AddBudgetModal({
             if (!selectedCategory) {
                 throw new Error('Категория не найдена');
             }
-
-            await createBudget({
-                category: selectedCategory.name,
-                amount: amountNumber,
-                period
-            });
 
             onSuccess();
             onClose();

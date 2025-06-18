@@ -26,7 +26,7 @@ type AuthContextType = {
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 const PUBLIC_PATHS = ['/', '/login', '/register'];
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://api.spendy.deevoice.ru/api/transactions';
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [user, setUser] = useState<User | null>(null);

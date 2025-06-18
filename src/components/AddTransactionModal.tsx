@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Account, Category, Transaction } from '@/types';
-import { createTransaction } from '@/api';
+import { createTransaction } from '@/api/transactions';
 import Modal from './Modal';
 import '@/styles/forms.css';
 import '@/styles/buttons.css';
