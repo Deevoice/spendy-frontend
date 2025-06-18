@@ -24,6 +24,7 @@ FROM base AS runner
 WORKDIR /app
 
 COPY --from=builder /app/deployment/entrypoint.sh /app/bin/
+COPY --from=builder /app /app/
 
 RUN chmod -R +x /app/bin
 
