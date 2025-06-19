@@ -1,0 +1,13 @@
+{
+    // Auto-formatting
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    // Auto-save
+    "files.autoSave": "afterDelay",
+    // Editor settings
+    "editor.tabSize": 2,
+    "i18n-ally.localesPaths": [
+        "public/locales"
+    ],
+}

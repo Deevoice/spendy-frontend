@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { createFinancialGoal } from '@/api';
 import '@/styles/modal.css';
 
 interface AddGoalModalProps {
@@ -52,13 +51,6 @@ export default function AddGoalModal({
             if (selectedDate < today) {
                 throw new Error('Дата достижения цели не может быть в прошлом');
             }
-
-            await createFinancialGoal({
-                name,
-                target_amount: targetAmountNumber,
-                deadline: new Date(targetDate).toISOString(),
-                monthly_contribution: Math.ceil((targetAmountNumber - (parseFloat(currentAmount) || 0)) / Math.max(1, Math.ceil((new Date(targetDate).getFullYear() - new Date().getFullYear()) * 12 + (new Date(targetDate).getMonth() - new Date().getMonth()))))
-            });
 
             onSuccess();
             onClose();

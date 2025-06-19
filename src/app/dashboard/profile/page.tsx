@@ -86,7 +86,7 @@ export default function ProfilePage() {
             }
 
             const token = localStorage.getItem('access_token');
-            const response = await fetch('http://localhost:8000/api/auth/me', {
+            const response = await fetch('https://api.spendy.deevoice.ru/api/auth/me', {
                 method: 'PATCH',
                 headers: {
                     Authorization: token ? `Bearer ${token}` : '',
@@ -135,7 +135,7 @@ export default function ProfilePage() {
 
         try {
             const token = localStorage.getItem('access_token');
-            const response = await fetch('http://localhost:8000/api/auth/me/password', {
+            const response = await fetch('https://api.spendy.deevoice.ru/api/auth/me/password', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,0 +1,8 @@
+services:
+  app:
+    image: ghcr.io/deevoice/spendy-frontend
+
+    restart: unless-stopped
+
+    ports:
+      - 127.0.0.1:3000:80

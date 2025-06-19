@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/contexts/AuthContext';
 import { Category, Budget, FinancialGoal, Transaction } from '@/types';
-import { getCategories, getBudgets, getFinancialGoals, getTransactions } from '@/api';
+import { getCategories, getBudgets, getFinancialGoals, getTransactions } from '@/api/transactions';
 import AddBudgetModal from '@/components/AddBudgetModal';
 import AddGoalModal from '@/components/AddGoalModal';
 import BudgetList from '@/components/BudgetList';

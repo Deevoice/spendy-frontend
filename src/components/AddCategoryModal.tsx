@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Category } from '@/types';
-import { createCategory } from '@/api';
+import { createCategory } from '@/api/transactions';
 import Modal from './Modal';
 import '@/styles/forms.css';
 import '@/styles/buttons.css';

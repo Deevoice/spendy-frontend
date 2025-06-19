@@ -1,6 +1,6 @@
 import { Transaction, Category, Account, TransactionStats } from '@/types/transaction';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://api.spendy.deevoice.ru/api/transactions';
 
 // Helper function to get auth token
 const getAuthToken = () => {
@@ -167,4 +167,12 @@ export async function getTransactionStats(period: string, accountId?: number): P
         throw new Error('Failed to fetch transaction stats');
     }
     return response.json();
-} 
+}
+
+export const getBudgets = async () => {
+    return Promise<any>;
+};
+
+export const getFinancialGoals = async () => {
+    return Promise<any>;
+};
